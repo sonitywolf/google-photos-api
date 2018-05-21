@@ -18,8 +18,15 @@ browser.get("https://photos.app.goo.gl/id10fyq9DCIpxMQX2")
 
 images = browser.find_elements_by_class_name("rtIMgb")
 
-for image in images:
-    pprint(image.get_screenshot_as_image('testing'))
+test_image = images[0]
+test_image.click()
+image = browser.find_elements_by_class_name("rtIMgb")
+pprint(image)
+
+# for image in images:
+#     image.click()
+#     image = browser.find_elements_by_class_name("rtIMgb")
+#     pprint(image)
 
 
 images[0].get_screenshot_as_file("testing.png")
