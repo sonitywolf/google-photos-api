@@ -20,7 +20,7 @@ images = browser.find_elements_by_class_name("rtIMgb")
 
 test_image = images[0]
 test_image.click()
-image = browser.find_elements_by_class_name("rtIMgb")
+image = browser.find_element_by_tag_name("img")
 pprint(image)
 
 # for image in images:
@@ -29,8 +29,4 @@ pprint(image)
 #     pprint(image)
 
 
-images[0].get_screenshot_as_file("testing.png")
-pprint(images)
-
-
-driver.close()
+browser.close()
